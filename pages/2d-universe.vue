@@ -18,13 +18,13 @@
       <SceneButtonSingle :sceneID="scenes.firstperson2d.firstperson2d" :text="'LOAD SCENE'" :imgName="'first_person_2d.png'"></SceneButtonSingle>
       <p>You can learn a lot by questioning the lives of other dimensional beings, but as demonstrated when we broke the laws of physics, it can also get complicated. To make things simpler, let's separate questions about other dimensions into 3 categories:</p>
       <ol>
-        <li>Senses - how a being observes their world</li>
-        <li>Physics - gravity, light, sound, etc.</li>
         <li>Shape - the space objects take up when stationary, moving, or rotating</li>
+        <li>Physics - gravity, light, sound, etc.</li>
+        <li>Senses - how a being observes their world</li>
       </ol>
-      <p>Most of this website will focus on #3. Here we're free to twist the laws of physics and represent objects in wacky ways as long as it makes an underlying shape easier to understand. That's why in 2D we're safe to imagine a universe where light bounces off 2D objects, and we're even safe to view 2D worlds from a perspective along the z axis.</p>
+      <p>Most of this website will focus on #1. Here we're free to twist the laws of physics and represent objects in wacky ways as long as it makes an underlying shape easier to understand. That's why in 2D we're safe to imagine a universe where light bounces off 2D objects, and we're even safe to view 2D worlds from a perspective along the z axis.</p>
       <img class="img-300" src="~assets/z_axis_check.png" alt="2D world viewed from z axis with a checkmark indicating it's okay to use">
-      <p>Moving forward, just how we can use different tools than a 2D being to understand 2D shapes, we can use different tools than a 4D being to understand 4D shapes.</p>
+      <p>Later on in 4D, we'll similarly focus on #1 to build a foundation before questioning #2 and #3.</p>
     </div>
   </div>
 </template>

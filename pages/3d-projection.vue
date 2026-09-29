@@ -6,7 +6,7 @@
       <p>This is where projection comes in.</p>
       <p>There are many types of projection, but the one we’ll be using is perspective projection. This type of projection is based on distance – the further a point is from the observer, the closer it will shrink towards the center of the projection image. This mimics what happens with our eyes, where objects appear to get smaller as they get further away.</p>
       <img class="img-wide lighter-image" src="~assets/perspective.png" alt="long hallway showing things that are further away being smaller">
-      <p>So what would the perspective projection of a 3D cube to a 2D image look like?</p>
+      <p>So what would the perspective projection of a 3D cube into a 2D image look like?</p>
       <SceneButtonSingle :sceneID="scenes.threeandcanvas.projCube" :text="'LOAD SCENE'" :imgName="'proj_3dcube.png'"></SceneButtonSingle>
       <p>If this doesn’t seem that exciting, it’s because this 3D to 2D perspective projection is exactly how we’ve been representing 3D objects on this 2D website the entire time! 🤯 This output is equivalent to the 2D image one of our eyes would capture if we entered the scene, centered ourselves on the gray plane, then looked at the cube.</p>
       <p>We’re not done yet though – we can pack in even more information:</p>

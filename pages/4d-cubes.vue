@@ -27,7 +27,7 @@
       <p>Again, just go crazy playing with all the sliders for a bit. Does anything seem familiar?</p>
       <p>The first big realization is that the object you’re looking at is just a bunch of 2D slices of the tesseract's 8 cubes stuck together!</p>
       <img class="img-300" src="~assets/slice_8_cubes.gif" alt="Highlight each face of the tesseract slice 1-8">
-      <p>..But if we're viewing in 3D, why would the 3D cubes get sliced to 2D?</p>
+      <p>...But if we're viewing in 3D, why would the 3D cubes get sliced to 2D?</p>
       <p>This is due to the cubes being situated somewhere along the w axis. You could give a cube the slightest twist into the fourth dimension and all that would remain in our 3D universe is a 2D slice. The same can be seen one dimension lower where a square rotating into the third dimension instantly turns into a 1D slice.</p>
       <!-- <SceneButtonSingle :sceneID="scenes.threeandcanvas.squareSlice" :text="'LOAD SCENE'" :imgName="'slice_cube.png'"></SceneButtonSingle> -->
       <img class="img-wide" src="~assets/square_rotate_plane.gif" alt="A 2D square rotating into a 2D plane creating a 1D line as a slice">

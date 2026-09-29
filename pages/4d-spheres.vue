@@ -10,7 +10,7 @@
       <p>First let's look at its slices. Slicing 3D objects created 2D slices, so move up a dimension and slicing 4D objects will create 3D slices. In this scene, drag the w slider to move the 4D sphere in and out of our 3D universe:</p>
       <SceneButtonSingle :sceneID="scenes.three.sliceHypersphere" :text="'LOAD SCENE'" :imgName="'slice_4dsphere.png'"></SceneButtonSingle>
       <p>Does this look familiar?</p>
-      <p>When the 4D sphere passes through our 3D universe, the slices it creates are 3D spheres whose size change with w distance. It's just like our 3D sphere that passed through a 2D universe, creating circular slices whose size changed with z distance!</p>
+      <p>When the 4D sphere passes through our 3D universe, the slices it creates are 3D spheres whose sizes change with w distance. It's just like our 3D sphere that passed through a 2D universe, creating circular slices whose sizes changed with z distance!</p>
       <img class="img-wide" src="~assets/sphere_slices_3d_2d.gif" alt="Animation of 3D sphere being sliced into 2D circles">
       <p>⚠️ WARNING ⚠️ If you find yourself trying to line up these slices in your head – something like this:</p>
       <img class="img-wide" src="~assets/sphere_slices_lined.png" alt="Slices of the hypersphere lined in a row on the x axis">
@@ -24,7 +24,7 @@
       <SceneButtonSingle :sceneID="scenes.three.projHypersphere" :text="'LOAD SCENE'" :imgName="'proj_4dsphere.png'"></SceneButtonSingle>
       <p>This object was constructed by placing random points on the surface of a 4D sphere. Points that are further away on the w axis will appear closer towards the center of the 3D projection, allowing us to squeeze all of the 4D points into this 3D universe at the same time. Points are colored lighter when closer to the center of the 3D projection (NOT the center of the 4D sphere) just so it’s easier to see where they are in relation to each other.</p>
       <p>Keep in mind, an object does not actually change shape during rotation. Points in the 4D sphere that are 2cm away from the center will remain 2cm away as it rotates. The points only appear to move because the projection changes when we look at the object from different orientations.</p>
-      <p>Rotate on each plane individually with the other planes set to 0°. Notice how each causes a similar transformation where it looks like points are shifting from the outside to the inside.</p>
+      <p>Rotate on each plane individually with the other planes set to 0° and track the path of any point with your eyes. Notice how each rotation causes a similar transformation where it looks like points are shifting from the outside to the inside:</p>
       <img class="img-wide" src="~assets/proj_sphere_4d_highlight.gif" alt="Rotating projection of 4D sphere with 1 point highlighted to show its movement">
       <p>A similar in and out motion can be seen in the projection of a 3D sphere.</p>
       <img class="img-wide" src="~assets/proj_sphere_3d_highlight.gif" alt="Rotating projection of 3D sphere with 1 point highlighted to show its movement">
