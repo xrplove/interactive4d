@@ -276,6 +276,12 @@ export default {
                 let bottomD = new Util.createDimensions(width, bottomHeight)
                 Axes.updateSideViewResolutions(this.state, mainD, bottomD)
             }
+
+            // setSize clears the canvas, so render immediately to avoid a black frame
+            renderer.render(threeScene, camera)
+            if (this.bottomCamActive) {
+                bottomRend.render(threeScene, bottomCam)
+            }
         },
         initRenderer(canvas, w, h) {
             let rend = new THREE.WebGLRenderer({
