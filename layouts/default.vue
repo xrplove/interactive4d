@@ -537,6 +537,13 @@ h1 {
     font-style: italic;
     grid-column: 1 / 3;
     grid-row: 1;
+    font-size: 1.95rem
+}
+
+h2 {
+    font-size: 1.45rem;
+    margin-top: 0.85em;
+    margin-bottom: 0.85em;
 }
 
 button:hover:not(.active) {
@@ -598,6 +605,11 @@ input[type=checkbox], input[type=range], input[type=checkbox]+label {
 
 html, body, #__nuxt, #__layout {
     height: 100%;
+}
+
+/* This is supposed to fix height issues on mobile, but there are still issues on mobile firefox >:( */
+html {
+    height: 100svh;
 }
 
 body {
@@ -714,8 +726,8 @@ a {
     color: #62DDE5;
 }
 
-@media screen and (max-width: 800px),
-        screen and (max-height: 700px) {
+@media screen and (max-width: 850px),
+        screen and (max-height: 750px) {
   h1 {
     margin-top: 8px;
   }
@@ -730,15 +742,15 @@ a {
   }
 }
 
-@media screen and (max-width: 600px),
-        screen and (max-height: 500px) {
+@media screen and (max-width: 700px),
+        screen and (max-height: 600px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     margin-top: 4px;
   }
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .nav-burger {
@@ -763,5 +775,12 @@ a {
   .article {
       overflow-y: auto;
   }
+}
+
+@media screen and (max-width: 500px),
+        screen and (max-height: 500px) {
+    h1 {
+        display: none;
+    }
 }
 </style>

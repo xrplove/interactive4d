@@ -89,6 +89,7 @@ export default {
 .button-text {
   width: 60%;
   float: left;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 </style>

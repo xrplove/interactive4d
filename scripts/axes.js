@@ -177,21 +177,35 @@ function createLabeledLine(state, scene, startAndEnd, color, canvasW, canvasH, l
     return [(middleStartEnd[0]+middleStartEnd[3])/2, middleStartEnd[1], middleStartEnd[2]]
 }
 
-export function createLabel(scene, text, position, scale, color) {
+const labelW = 200
+const labelH = 30
+const labelFont = '30px Karla'
+
+function createLabelTexture(text, color) {
     let canvas = document.createElement('canvas')
-    let spriteW = 200
-    let spriteH = 30
-    canvas.width = spriteW
-    canvas.height = spriteH
+    canvas.width = labelW
+    canvas.height = labelH
     let ctx = canvas.getContext('2d')
-
-    ctx.textAlign = 'center'
-    ctx.fillStyle = color
-    ctx.font = '30px Karla'
-    ctx.fillText(text, spriteW/2, 22)
-
     let t = new THREE.Texture(canvas)
-    t.needsUpdate = true
+
+    const draw = () => {
+        ctx.clearRect(0, 0, labelW, labelH)
+        ctx.textAlign = 'center'
+        ctx.fillStyle = color
+        ctx.font = labelFont
+        ctx.fillText(text, labelW/2, 22)
+        t.needsUpdate = true
+    }
+    draw()
+    // Since the Karla font uses display=swap, it may not have been loaded on the first draw.
+    // Wait for it to load and draw again.
+    document.fonts.load(labelFont).then(draw)
+
+    return t
+}
+
+export function createLabel(scene, text, position, scale, color) {
+    let t = createLabelTexture(text, color)
 
     let mat = new THREE.SpriteMaterial({
         map: t,
@@ -201,7 +215,7 @@ export function createLabel(scene, text, position, scale, color) {
 
     let sp = new THREE.Sprite(mat)
     sp.position.set(position[0], position[1], position[2])
-    sp.scale.set((spriteW/spriteH)*scale, scale, 1)
+    sp.scale.set((labelW/labelH)*scale, scale, 1)
     scene.add(sp)
     sp.renderOrder = 3
     return sp
@@ -379,21 +393,7 @@ export function updateZLine(state, cameraPosition) {
     state.zLabel.position.set(cameraPosition.x, cameraPosition.y+1.4, cameraPosition.z/2)
     let text = 'Z='+cameraPosition.z.toFixed(2)
 
-    let canvas = document.createElement('canvas')
-    let spriteW = 200
-    let spriteH = 30
-    canvas.width = spriteW
-    canvas.height = spriteH
-    let ctx = canvas.getContext('2d')
-
-    ctx.textAlign = 'center'
-    ctx.fillStyle = '#FFFFFF'
-    ctx.font = '30px Karla'
-    ctx.fillText(text, spriteW/2, 22)
-
-    let t = new THREE.Texture(canvas)
-    t.needsUpdate = true
-    state.zLabel.material.map = t
+    state.zLabel.material.map = createLabelTexture(text, '#FFFFFF')
 }
 
 export function updateSideViewResolutions(state, mainCanvasD, bottomCanvasD) {

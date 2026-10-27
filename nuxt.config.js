@@ -29,7 +29,7 @@ export default {
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com'},
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Karla'
+        href: 'https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap'
       },
       {
         rel: 'stylesheet',
