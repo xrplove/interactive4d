@@ -33,40 +33,40 @@
             <div class="bottom-right sticky-box">
                 <div class="slider-row" v-show="slidersEnabled.RESET">
                     <button aria-label="reset" class="slider-button" @click="resetSliderValues"><svg class="reset-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="#e8e8e8" d="M480 256c0 123.4-100.5 223.9-223.9 223.9c-48.84 0-95.17-15.58-134.2-44.86c-14.12-10.59-16.97-30.66-6.375-44.81c10.59-14.12 30.62-16.94 44.81-6.375c27.84 20.91 61 31.94 95.88 31.94C344.3 415.8 416 344.1 416 256s-71.69-159.8-159.8-159.8c-37.46 0-73.09 13.49-101.3 36.64l45.12 45.14c17.01 17.02 4.955 46.1-19.1 46.1H35.17C24.58 224.1 16 215.5 16 204.9V59.04c0-24.04 29.07-36.08 46.07-19.07l47.6 47.63C149.9 52.71 201.5 32.11 256.1 32.11C379.5 32.11 480 132.6 480 256z"/></svg></button>
-                    <span class="unit-text invisible">°</span>
+                    <span class="unit-text invisible" v-show="isAnyDegreeSliderEnabled">°</span>
                 </div>
                 <div class="slider-row" v-show="slidersEnabled.ZW">
                     <label for="angleZW">ZW</label>
-                    <input id="angleZW" v-model="angleDegZW" type="range" :min="startSliderAt0 ? 0 : -angleMax" :max="angleMax" value="0" step="1" :style="{'width': sliderWidth + 'px'}">
+                    <input id="angleZW" class="slider" v-model="angleDegZW" type="range" :min="startSliderAt0 ? 0 : -angleMax" :max="angleMax" value="0" step="1" :style="{'width': sliderWidth + 'px'}">
                     <input aria-label="ZW value" v-model="angleDegZW" class="slider-text" type="text" size="4" maxlength="5">
                     <span class="unit-text">°</span>
                 </div>
                 <div class="slider-row" v-show="slidersEnabled.YW">
                     <label for="angleYW">YW</label>
-                    <input id="angleYW" v-model="angleDegYW" type="range" :min="-angleMax" :max="angleMax" value="0" step="1" :style="{'width': sliderWidth + 'px'}">
+                    <input id="angleYW" class="slider" v-model="angleDegYW" type="range" :min="-angleMax" :max="angleMax" value="0" step="1" :style="{'width': sliderWidth + 'px'}">
                     <input aria-label="YW value" v-model="angleDegYW" class="slider-text" type="text" size="4" maxlength="5">
                     <span class="unit-text">°</span>
                 </div>
                 <div class="slider-row" v-show="slidersEnabled.XW">
                     <label for="angleXW">XW</label>
-                    <input id="angleXW" v-model="angleDegXW" type="range" :min="-angleMax" :max="angleMax" value="0" step="1" :style="{'width': sliderWidth + 'px'}">
+                    <input id="angleXW" class="slider" v-model="angleDegXW" type="range" :min="-angleMax" :max="angleMax" value="0" step="1" :style="{'width': sliderWidth + 'px'}">
                     <input aria-label="XW value" v-model="angleDegXW" class="slider-text" type="text" size="4" maxlength="5">
                     <span class="unit-text">°</span>
                 </div>
                 <div class="slider-row" v-show="slidersEnabled.IN">
                     <label for="angleIN">IN/OUT</label>
-                    <input id="angleIN" v-model="angleDegIN" type="range" :min="-angleMax" :max="angleMax" value="0" step="1" :style="{'width': sliderWidth + 'px'}">
+                    <input id="angleIN" class="slider" v-model="angleDegIN" type="range" :min="-angleMax" :max="angleMax" value="0" step="1" :style="{'width': sliderWidth + 'px'}">
                     <input aria-label="IN/OUT value" v-model="angleDegIN" class="slider-text" type="text" size="4" maxlength="5">
                     <span class="unit-text">°</span>
                 </div>
                 <div class="slider-row" v-show="slidersEnabled.W">
                     <label for="translateW">W</label>
-                    <input id="translateW" v-model="translateW" type="range" :min="-wMax" :max="wMax" value="0" step="0.01" :style="{'width': sliderWidth + 'px'}">
+                    <input id="translateW" class="slider" v-model="translateW" type="range" :min="-wMax" :max="wMax" value="0" step="0.01" :style="{'width': sliderWidth + 'px'}">
                     <input aria-label="W value" class="slider-text" v-model="translateW" type="text" size="4" maxlength="5">
-                    <span class="unit-text invisible">°</span>
+                    <span class="unit-text invisible" v-show="isAnyDegreeSliderEnabled">°</span>
                 </div>
                 <div class="slider-row" v-show="slidersEnabled.GEN">
-                    <input aria-label="angle" v-model="angleDegGEN" type="range" :min="-angleMax" :max="angleMax" value="0" step="1" :style="{'width': sliderWidth + 'px'}">
+                    <input class="slider" aria-label="angle" v-model="angleDegGEN" type="range" :min="-angleMax" :max="angleMax" value="0" step="1" :style="{'width': sliderWidth + 'px'}">
                     <input aria-label="angle value" class="slider-text" v-model="angleDegGEN" type="text" size="4" maxlength="5">
                     <span class="unit-text">°</span>
                 </div>
@@ -128,6 +128,9 @@ let frameCount = 0
 
 let cubeIndex = 0
 
+// Sliders whose value is shown with a degree symbol
+const degreeSliders = ['XW', 'YW', 'ZW', 'IN', 'GEN']
+
 export default {
     data() {
         return {
@@ -184,6 +187,9 @@ export default {
         },
         sliderWidth() {
             return this.$store.state.sliderWidth
+        },
+        isAnyDegreeSliderEnabled() {
+            return degreeSliders.some(key => this.slidersEnabled[key])
         }
     },
     watch: {
@@ -576,18 +582,23 @@ export default {
 
 .sticky-box {
     position: absolute;
-    padding: 6px;
+    padding: 8px;
     pointer-events: auto;
 }
 
 .slider-row {
     text-align: right;
+    margin-bottom: 2px;
 }
 
 .slider-text {
     border-radius: 4px;
     border: none;
     text-align: center;
+}
+
+.slider {
+    vertical-align: middle;
 }
 
 .invisible {
@@ -619,7 +630,7 @@ export default {
 }
 
 .slider-button {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     border: none;
     border-radius: 5px;
     padding-left: 8px;
