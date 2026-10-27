@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="article-header">THINKING IN DIMENSIONS</h2>
-    <div class="main-content">
+    <main class="main-content">
       <p>To understand 4 dimensions, let’s start by simply creating a 4 dimensional universe 👍 The building blocks for our universe will be axes, where a singular axis is just a line.</p>
       <p>Starting from nothingness, add one axis and we've got a 1D universe. The only objects that fit in here are lines along the axis. This simple scene shows an entire 1D universe containing 4 colored lines:</p>
       <SceneButtonSingle :sceneID="scenes.three.axis1D" :text="'LOAD SCENE'" :imgName="'axis1d.png'"></SceneButtonSingle>
@@ -16,7 +16,7 @@
       <p>It’s a good start, but the problem here is that everything gets stretched out of proportion. Since we’ve squished all the axes into 3D the angle between each is no longer 90°, meaning they are no longer perpendicular. The true fourth axis is angled in some direction we can’t see no matter how much we move and rotate around in 3D. That means adding the fourth axis would actually look like nothing to us.</p>
       <img class="img-wide" src="~assets/3d4d_no_difference.png" alt="3D axes and 4D axes shown to look identical in 3D">
       <p>In other words, observing 4D as a 3D being can get pretty tricky. But fear not! In the next few sections we'll build up a solid understanding of simpler dimensions that makes this all much easier.</p>
-    </div>
+    </main>
   </div>
 </template>
 

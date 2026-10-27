@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="article-header">4D CONES</h2>
-    <div class="main-content">
+    <main class="main-content">
       <p>Now that we've observed what I would consider the two most fundamental 4D shapes, let's test our skills and throw in a wildcard. What would a 4D cone look like?</p>
       <p>As always, let’s start by going back a dimension and working with what we know in 3D. How do you define a 3D cone?</p>
       <p>All you need is a 2D circle and a point. Place the point in the center of the circle, drag it into the third dimension, then connect it to all of the circle's points and you’re done. In reality there would be an infinite number of points on the circle, but for visibility I've highlighted just a few of them here:</p>
@@ -32,7 +32,7 @@
       <img class="img-wide" src="~assets/cone_slice_comparison_s.png" alt="Comparing 3D and 4D cone slices">
       <p>Hopefully by this point I've proven how useful it is to compare slices and projections between dimensions. Understand them in 3D and you nearly understand them in 4D. Understand them in 4D and you nearly understand the entire 4D shape.</p>
       <p>Now that we've gone through this process with our basic shapes, working with any other 4D shape will be much easier. 4D cylinder? Just like a 4D cone but instead of a single point dragged into the fourth dimension it’s a 3D sphere. <a href="https://en.wikipedia.org/wiki/24-cell" target="_blank">Icositetrachoron</a>? Just an object that’s somewhere between a tesseract and a 4D sphere. Break things up into small manageable pieces and 4D becomes a lot less scary.</p>
-    </div>
+    </main>
   </div>
 </template>
 

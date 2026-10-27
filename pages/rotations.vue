@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="article-header">PLANES OF ROTATION</h2>
-    <div class="main-content">
+    <main class="main-content">
       <p>Before we get too far, this is a good time to dip our toes back into the 4th dimension and learn about 4D rotations.</p>
       <p>A common way to describe rotations is in terms of axes. To rotate a single point around an axis, I like to imagine a solid beam being glued between the two. Now when the axis spins, the point will spin with it.</p>
       <p>Another way to think of rotations is in terms of 2D planes. Now our imaginary beam is simply glued between the point and plane.</p>
@@ -25,7 +25,7 @@
       <p>In 4D, the z axis is perpendicular to the XY, XW, and YW planes. You could rotate a point on any of those planes and consider it a z axis rotation because the point could maintain one of our solid "beams" with the z axis. This is tricky to visualize in 3D since our 4D axes will always be skewed away from being perpendicular.</p>
       <img class="img-wide" src="~assets/z_rotation_4d.png" alt="x, y, z, w, axes with xy, xw, yw planes">
       <p>The important point is that in 4D, given the choice between 1 axis and 3 planes, the 3 planes allow us to be more precise. On top of that, tell someone “rotate on the XY plane by 30°” and the same action will be performed for every dimension from 2D to ∞D. For these reasons we'll be describing all future rotations in terms of planes.</p>
-    </div>
+    </main>
   </div>
 </template>
 

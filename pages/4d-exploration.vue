@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="article-header">4D EXPLORATION</h2>
-    <div class="main-content">
+    <main class="main-content">
       <p>So, we've got a basic understanding of the fourth dimension. Now what?</p>
       <p>For starters, there's plenty to discover by playing around with the concepts we've already learned. Like did you know rotating a 3D object on a 4D plane allows you to completely flip the 3D object? Rotate this 3D cube to 180° on the ZW plane to see what I mean:</p>
       <SceneButtonSingle :sceneID="scenes.three.rotateCubeIn4D" :text="'LOAD SCENE'" :imgName="'flip_4d.png'"></SceneButtonSingle>
@@ -20,7 +20,7 @@
       <div class="img-link-box"><a title="derivative work: Pbroks13 (talk) Hypersphere_coord.gif: Claudio Rocchini, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Hypersphere_coord.PNG" target="_blank"><img class="img-300 link-img" alt="Hypersphere coord" src="~assets/Hypersphere_coord.PNG"></a></div>
       <p>There’s always more to learn, but at this point you've accomplished a lot in 4D! If you remember your basic 4D shapes and to always consider an equivalent 3D/2D scenario, I'd say you’re doing pretty good. Now that you have an extra dimension at your disposal, anything is possible 👽</p>
       <p class="big-spacer">...Also if you found this website useful please consider donating with the link at the bottom of the page! I believe the content here should remain free, but I’ve put a lot of work into creating it and will continue putting effort into updating and maintaining it. Thank you!</p>
-    </div>
+    </main>
   </div>
 </template>
 

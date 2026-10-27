@@ -539,6 +539,14 @@ h1 {
     grid-row: 1;
 }
 
+button:hover:not(.active) {
+    cursor: pointer;
+}
+
+input[type=checkbox], input[type=range], input[type=checkbox]+label {
+    cursor: pointer;
+}
+
 .gray-rounded-button {
     background: rgb(60, 60, 60);
     color: rgb(232, 232, 232);

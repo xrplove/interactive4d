@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="article-header">3D SLICES</h2>
-    <div class="main-content">
+    <main class="main-content">
       <p>Our goal is to understand 4D objects, but more specifically our goal is to understand 4D objects as a 3D being. What if we started with a simpler version of the problem and tried to understand 3D objects as a 2D being?</p>
       <p>I’d like to point out that this ends up being extremely useful. Whenever something in 4D confuses me, returning to these concepts often provides the most insight.</p>
       <p>So what happens when we drag a 3D sphere along the z axis through a 2D universe?</p>
@@ -22,7 +22,7 @@
       <p>One thing worth mentioning is that these slices are a bit simplified because we’ve been working with 3D shapes whose insides are completely solid or completely hollow. Complex objects with a more detailed inside will have a more detailed slice.</p>
       <img class="img-wide" src="~assets/orange_slice.png" alt="Whole orange, arrow pointing to the right, then a slice of an orange">
       <!-- <SceneButtonSingle :sceneID="scenes.three.sphereSliceAnim" :text="'SPHERE SLICE ANIM'" :imgName="'slice_3dsphere.png'"></SceneButtonSingle> -->
-    </div>
+    </main>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="article-header">3D PROJECTION</h2>
-    <div class="main-content">
+    <main class="main-content">
       <p>So we’ve tossed a 3D object through a 2D universe, but can’t we do more to help our 2D fellas out? Can we somehow pack more information into a 2D image to give them an even better understanding of a 3D object?</p>
       <p>This is where projection comes in.</p>
       <p>There are many types of projection, but the one we’ll be using is perspective projection. This type of projection is based on distance – the further a point is from the observer, the closer it will shrink towards the center of the projection image. This mimics what happens with our eyes, where objects appear to get smaller as they get further away.</p>
@@ -19,7 +19,7 @@
       <SceneButtonSingle :sceneID="scenes.threeandcanvas.projSphere" :text="'LOAD SCENE'" :imgName="'proj_3dsphere.png'"></SceneButtonSingle>
       <p>If instead we highlight points along the surface of the sphere, now we can observe how the surface moves during rotation:</p>
       <SceneButtonSingle :sceneID="scenes.threeandcanvas.projSpherePoints" :text="'LOAD SCENE'" :imgName="'proj_3dsphere_points.png'"></SceneButtonSingle>      
-    </div>
+    </main>
   </div>
 </template>
 

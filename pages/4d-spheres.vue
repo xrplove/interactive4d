@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="article-header">4D SPHERES</h2>
-    <div class="main-content">
+    <main class="main-content">
       <p>Now our journey into the fourth dimension can truly begin. To gain a solid understanding of the fourth dimension, we require a solid understanding of simple 4D shapes. We begin with the 4D sphere.</p>
       <p>Given a generic radius of length <b>R</b>, a 4D sphere is the set of all points that are <b>R</b> distance away from a fixed center point in 4D space. This is analogous to the points of a circle in 2D space, and the points of a regular sphere in 3D space.</p>      
       <img class="img-wide" src="~assets/circle_and_sphere.png" alt="circle with radius R and 3D sphere with radius R">
@@ -37,7 +37,7 @@
         <li>Use these insights to infer what the slices and projection of the 4D object would look like</li>
       </ol>
       <p>This process can’t answer every question, and it isn’t always easy, but it’s surprisingly effective. This means all we need to do to understand a big chunk of the fourth dimension is get familiar with the slices and projections of other simple 3D and 4D shapes.</p>
-    </div>
+    </main>
   </div>
 </template>
 

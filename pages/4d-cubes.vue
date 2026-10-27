@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="article-header">4D CUBES</h2>
-    <div class="main-content">
+    <main class="main-content">
       <p>4D spheres were a good introduction, but 4D cubes (also known as 4D hypercubes or tesseracts) are worth taking the time to really sit with. They're simple enough to understand, yet complex enough to reveal most of the strangeness found in 4D.</p>
       <p>To build a 4D cube, let’s start all the way back with a simple 1D line.</p>
       <img class="img-wide" src="~assets/white_line.png" alt="White 1D line">
@@ -49,7 +49,7 @@
       <p>Look over to the projection image and this is the exact alignment you’ll see. The cubes colored <span class="color-box cube2"></span> and <span class="color-box cube0"></span> have their faces pointed inwards while the <span class="color-box cube6"></span>, <span class="color-box cube4"></span>, <span class="color-box cube3"></span>, and <span class="color-box cube1"></span> cubes have their edges pointed inwards.</p>
       <img class="img-wide" src="~assets/face_vs_edge_in.gif" alt="Highlights cubes in the tesseract projection with their faces or edges pointing in">
       <p>There’s really no limit to the amount of insights you can gain from these tesseract representations, but at this point we’ve covered all the core concepts. In fact, you’re probably much more capable of understanding the fourth dimension than you realize. Think of all the 3D objects that can be approximated as just a stretched sphere or cube. You now have the tools to understand the equivalent objects in 4D by representing them as a stretched 4D sphere or 4D hypercube!</p>
-    </div>
+    </main>
   </div>
 </template>
 

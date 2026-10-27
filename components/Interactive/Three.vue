@@ -15,15 +15,15 @@
                         <div class="color-patch cube0"></div>
                         <div class="color-patch cube7"></div>
                     </button>
-                    <button aria-label="color cubes 3 and 4" v-show="enableOppositeCubeColors" class="top-right-button" :class="{'active': !oppCubeIndex === 1, 'inactive': oppCubeIndex !== 1}" @click="oppCubeIndex=1">
+                    <button aria-label="color cubes 3 and 4" v-show="enableOppositeCubeColors" class="top-right-button" :class="{'active': oppCubeIndex === 1, 'inactive': oppCubeIndex !== 1}" @click="oppCubeIndex=1">
                         <div class="color-patch cube1"></div>
                         <div class="color-patch cube4"></div>
                     </button>
-                    <button aria-label="color cubes 5 and 6" v-show="enableOppositeCubeColors" class="top-right-button" :class="{'active': !oppCubeIndex === 2, 'inactive': oppCubeIndex !== 2}" @click="oppCubeIndex=2">
+                    <button aria-label="color cubes 5 and 6" v-show="enableOppositeCubeColors" class="top-right-button" :class="{'active': oppCubeIndex === 2, 'inactive': oppCubeIndex !== 2}" @click="oppCubeIndex=2">
                         <div class="color-patch cube2"></div>
                         <div class="color-patch cube5"></div>
                     </button>
-                    <button aria-label="color cubes 7 and 8" v-show="enableOppositeCubeColors" class="top-right-button" :class="{'active': !oppCubeIndex === 3, 'inactive': oppCubeIndex !== 3}" @click="oppCubeIndex=3">
+                    <button aria-label="color cubes 7 and 8" v-show="enableOppositeCubeColors" class="top-right-button" :class="{'active': oppCubeIndex === 3, 'inactive': oppCubeIndex !== 3}" @click="oppCubeIndex=3">
                         <div class="color-patch cube3"></div>
                         <div class="color-patch cube6"></div>
                     </button>
