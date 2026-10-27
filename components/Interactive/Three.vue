@@ -3,6 +3,9 @@
     <div class="three-container">
         <canvas ref="canvas"></canvas>
         <div class="three-overlay">
+            <div class="top-left sticky-box" v-show="showCubeToggle">
+                <button class="top-right-button inactive cube-toggle" @click="toggleCubeScene">{{cubeToggleText}}</button>
+            </div>
             <div class="top-right sticky-box">
                 <div class="slider-row">
                     <button v-show="scene === rapSceneID" class="top-right-button" :class="{'active': !isPlaneActive, 'inactive': isPlaneActive}" @click="isPlaneActive=false">Axis</button>
@@ -188,6 +191,12 @@ export default {
         sliderWidth() {
             return this.$store.state.sliderWidth
         },
+        showCubeToggle() {
+            return this.$route.name === '4d-cubes' && (this.scene === Constants.scenes.three.sliceHypercube || this.scene === Constants.scenes.three.projHypercube)
+        },
+        cubeToggleText() {
+            return this.scene === Constants.scenes.three.projHypercube ? 'Show Slice' : 'Show Projection'
+        },
         isAnyDegreeSliderEnabled() {
             return degreeSliders.some(key => this.slidersEnabled[key])
         }
@@ -268,6 +277,9 @@ export default {
         }
     },
     methods: {
+        toggleCubeScene() {
+            this.$store.commit('updateScene', this.scene === Constants.scenes.three.projHypercube ? Constants.scenes.three.sliceHypercube : Constants.scenes.three.projHypercube)
+        },
         setCameraAxis1D() {
             const fov = 80
             const planeAspectRatio = 430/110
@@ -571,8 +583,16 @@ export default {
     pointer-events: none;
 }
 
+.top-left {
+    left: 0;
+}
+
 .top-right {
     right: 0;
+}
+
+.cube-toggle {
+    width: 9em;
 }
 
 .bottom-right {
